@@ -1,192 +1,119 @@
-/* すべての要素に対してbox-sizingをborder-boxとしてください */
-*{box-sizing:border-box;}
-
+/* CSSのリセット（消さないでください） */
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div {
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+  font-family: "Avenir Next", "Hiragino Kaku Gothic ProN W3", sans-serif;
 }
 
-a {
-  text-decoration: none;
+li {
+  list-style:none;
 }
 
-.container {
-  /* widthを100%にしてください */
-  width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
+/* ここからCSSを記述してください */
+.header{
+  background-color:#26d0c9;
+  color:#fff;
+  height:90px;
 }
 
-.top-wrapper {
-  padding: 180px 0 100px 0;
-  background-image: url(https://prog-8.com/images/html/advanced/top.png);
-  background-size: cover;
-  color: white;
-  text-align: center;
+.header-logo{
+  float:left;
+  padding:20px 40px;
+  font-size:36px;
+}
+.header-list li{
+  list-style:none;
+float:left;
+  padding:33px 20px;
+}
+span{
+color:#ff4a4a;
+}
+.main{
+  margin:100px 80px ;
+}
+.top-container h1{
+  font-size:140px;
+}
+.top-container h2{
+  font-size:60px;
+}
+.contents{
+  height:500px;
+  margin:50px;
+}
+.contents h3{
+  font-size:28px;
+  border-bottom:2px solid #dee7ec;
+  padding:15px;
+  margin:80px;
+  border-color:#dee7ec;
+  margin-bottom:15px;
+}
+.contents-item{
+  float:left;
+  margin:30px 20px;
+  font-size:24px;
+}
+.contents-item p{
+  margin:30px auto;
 }
 
-.top-wrapper h1 {
-  opacity: 0.7;
-  font-size: 45px;
-  letter-spacing: 5px;
+form{
+  margin:100px 80px;
 }
 
-.top-wrapper p {
-  opacity: 0.7;
+form h3{
+  font-size:28px;
+  border-bottom:2px solid #dee7ec;
+  
 }
 
-.btn-wrapper {
-  text-align: center;
-  margin: 20px 0;
+form p{
+  margin:10px;
+  padding-bottom:10px;
 }
 
-.btn-wrapper p {
-  margin: 10px 0;
+
+input,textarea{
+  width:400px;
+  margin-top:10px;
+  margin-bottom:30px;
+  padding:20px;
+  font-size:18px;
+  border:1px solid #dee7ec;
 }
 
-.signup {
-  background-color: #239b76;
+.submit{
+  
+  background-color:#dee7ec;
+  color:#889eab;
 }
 
-.facebook {
-  background-color: #3b5998;
-  margin-right: 10px;
+.footer{
+ padding:40px;
+ background-color:#2f5167;
+ color:#fff;
+ height:120px;
 }
 
-.twitter {
-  background-color: #55acee;
+.footer-list{
+  float:right;
+  
+}
+  
+.footer-list li{
+  padding-bottom:20px;
+  float:none;
 }
 
-.btn {
-  padding: 8px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.btn:hover {
-  opacity: 1;
-}
-
-.fa {
-  margin-right: 5px;
-}
-
-header {
-  height: 65px;
-  width: 100%;
-  background-color: rgba(34, 49, 52, 0.9);
-  position :fixed;
-  top: 0;
-  z-index: 10;
-}
-
-.logo {
-  width: 124px;
-  margin-top: 20px;
-}
-
-.header-left {
-  float: left;
-}
-
-.header-right {
-  float: right;
-  margin-right: -25px;
-}
-
-.header-right a {
-  line-height: 65px;
-  padding: 0 25px;
-  color: white;
-  display: block;
-  float: left;
-  transition: all 0.5s;
-}
-
-.header-right a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.lesson-wrapper {
-  height: 580px;
-  padding-bottom: 80px;
-  padding-left: 5%;
-  padding-right: 5%;
-  background-color: #f7f7f7;
-  text-align: center;
-}
-
-.heading {
-  padding-top: 80px;
-  padding-bottom: 50px;
-  color: #5f5d60;
-}
-
-.heading h2 {
-  font-weight: normal;
-}
-
-.lesson {
-  float: left;
-  width: 25%;
-}
-
-.lesson-icon {
-  position: relative;
-}
-
-.lesson-icon p {
-  position: absolute;
-  top: 44%;
-  width: 100%;
-  color: white;
-}
-
-.text-contents {
-  width: 80%;
-  display: inline-block;
-  margin-top: 15px;
-  font-size: 13px;
-  color: #b3aeb5;
-}
-
-.heading h3 {
-  font-weight: normal;
-}
-
-.message-wrapper {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 80px;
-  text-align: center;
-}
-
-.message {
-  padding: 15px 40px;
-  background-color: #5dca88;
-  cursor: pointer;
-  box-shadow: 0 7px #1a7940;
-}
-
-.message:active {
-  position: relative;
-  top: 7px;
-  box-shadow: none;
-}
-
-footer img {
-  width: 125px;
-}
-
-footer p {
-  color: #b3aeb5;
-  font-size: 12px;
-}
-
-footer {
-  padding-top: 30px;
-  padding-bottom: 20px;
+.footer-logo{
+  font-size:32px;
+  float:left;
 }
